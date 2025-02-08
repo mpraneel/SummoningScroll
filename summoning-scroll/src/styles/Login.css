@@ -1,6 +1,6 @@
 /* Parchment-style background */
 body {
-    background: img src="summoning-scroll/src/images/parchment-texture.jpeg" no-repeat center center fixed;
+    background: url("../images/parchment-texture.jpeg") no-repeat center center fixed;
     background-size: cover;
     font-family: "Cinzel", serif;
     margin: 0;
@@ -16,7 +16,7 @@ body {
   }
   
   .login-box {
-    background: #f5e1a4; /* Parchment color */
+    background: #F9F1E6; /* Parchment color */
     padding: 40px;
     border-radius: 10px;
     text-align: center;
@@ -57,13 +57,18 @@ body {
   
   /* Button */
   button {
-    font-family: "Antic Slab", serif;
-    background-color: #8b0000;
+    background: #8b0000; /* Dark red */
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px; /* Adds space between button and input */
+    transition: background 0.3s ease;
+
   }  
   
   .login-button:hover {
