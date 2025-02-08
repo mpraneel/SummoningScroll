@@ -1,18 +1,14 @@
 import React from "react";
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import { GoogleMap, Marker } from "@react-google-maps/api";
 
 const mapContainerStyle = {
   width: "100%",
-  height: "calc(100vh - 60px)", // Adjust height to account for Navbar
+  height: "80vh", 
+  minHeight: "400px",
 };
 
 const QuestMap = ({ userLocation, quests }) => {
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-  });
-
-  if (loadError) return <div>Error loading maps</div>;
-  if (!isLoaded) return <div>Loading Maps...</div>;
+  if (!userLocation) return <div>Loading user location...</div>;
 
   return (
     <GoogleMap
@@ -20,7 +16,7 @@ const QuestMap = ({ userLocation, quests }) => {
       zoom={14}
       center={userLocation}
     >
-      {/* Marker for user's location */}
+      {/* User's Location Marker */}
       <Marker
         position={userLocation}
         icon={{
@@ -28,11 +24,11 @@ const QuestMap = ({ userLocation, quests }) => {
         }}
       />
 
-      {/* Markers for quests */}
+      {/* Quest Markers */}
       {quests.map((quest) => (
         <Marker
           key={quest.id}
-          position={{ lat: quest.latitude, lng: quest.longitude }}
+          position={{ lat: quest.location.lat, lng: quest.location.lng }}
           title={quest.title}
         />
       ))}
