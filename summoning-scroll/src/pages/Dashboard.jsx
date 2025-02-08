@@ -1,17 +1,34 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import QuestMap from "../components/QuestMap";
-import { QuestContext } from "../context/QuestContext";
 import { LoadScript } from "@react-google-maps/api";
 
 const Dashboard = () => {
-  const { quests, fetchQuests } = useContext(QuestContext);
   const [userLocation, setUserLocation] = useState(null);
+
+  // Mock quests data
+  const quests = [
+    {
+      title: "Save the Forest",
+      description: "Plant trees in the park",
+      location: { lat: 35.7847, lng: -78.6821 },
+    },
+    {
+      title: "Feed the Hungry",
+      description: "Serve meals at the shelter",
+      location: { lat: 35.7741, lng: -78.6330 },
+    },
+  ];
+
+  // Mock fetchQuests function
+  const fetchQuests = () => {
+    console.log("Mock fetchQuests called");
+  };
 
   // Fetch quests from Firebase on component mount
   useEffect(() => {
     fetchQuests();
-  }, [fetchQuests]);
+  }, []);
 
   // Get user's current location
   useEffect(() => {
