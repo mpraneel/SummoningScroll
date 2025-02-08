@@ -1,0 +1,72 @@
+/* Parchment-style background */
+body {
+    background: img src="summoning-scroll/src/images/parchment-texture.jpeg" no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Cinzel", serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Login container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background: #f5e1a4; /* Parchment color */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+  
+  /* Wax seal icon */
+  .wax-seal {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+  
+ /* Apply Rye font for the "Login" title */
+.login-title {
+    font-family: "Rye", cursive;
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Apply Antic Slab font for subtitles and labels */
+  .login-subtitle,
+  label {
+    font-family: "Antic Slab", serif;
+    color: #000000;
+    font-size: 1.2rem;
+  }
+  
+  /* Input fields */
+  input {
+    font-family: "Antic Slab", serif;
+    border: 1px solid #000000; /* Light brown border */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Button */
+  button {
+    font-family: "Antic Slab", serif;
+    background-color: #8b0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }  
+  
+  .login-button:hover {
+    background: #a60000; /* Slightly lighter red */
+  }
+  
