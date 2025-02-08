@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Login.css"; // Link to your CSS
+import { auth, provider, googleSignin } from  "../firebase/firebase"
 
 const Login = () => {
   return (
@@ -14,6 +15,7 @@ const Login = () => {
           <label>Password</label>
           <input type="password" placeholder="Enter your password" />
           <button type="submit" className="login-button">Enter the Realm</button>
+          <button type="button" onClick={() => googleSignin(auth, provider)} className="login-button">Login with Google</button>
         </form>
       </div>
     </div>
