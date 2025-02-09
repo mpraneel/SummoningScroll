@@ -59,3 +59,8 @@
     width: auto;
     margin-top: 10px;
   }
+  .navbar-links {
+    font-family: "Rye", cursive;
+    margin-right: -70px;
+    align-items: center;
+  }

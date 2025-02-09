@@ -30,6 +30,16 @@ const DashboardNavbar = () => {
               Ledger
             </Link>
           </li>
+          <li className="navbar-shop">
+            <Link to="/shop" className="navbar-link">
+              Shop
+            </Link>
+          </li>
+          <li className="navbar-profile">
+            <Link to="/profile" className="navbar-link">
+              Profile
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
