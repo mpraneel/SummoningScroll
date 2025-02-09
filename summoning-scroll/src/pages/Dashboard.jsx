@@ -5,6 +5,7 @@ import QuestList from "../components/QuestList";
 import PlayerCharacter from "../components/PlayerCharacter";
 import { LoadScript } from "@react-google-maps/api";
 import "../styles/Dashboard.css";
+import DashboardNavbar from "../components/DashboardNavbar";
 
 const Dashboard = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -42,7 +43,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <Navbar />
+      <DashboardNavbar />
       <div className="dashboard-container">
         <div className="player-character-wrapper">
           <h2 className="player-username">MysticSorcerer42</h2>
