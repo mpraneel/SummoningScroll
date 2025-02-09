@@ -1,33 +1,9 @@
-import { useUser } from "../context/UserContext"
-import { auth } from  "../firebase/firebase"
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
 import "../styles/Login.css"; // Link to your CSS
-<<<<<<< HEAD
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-=======
-import { auth, provider, googleSignin } from  "../firebase/firebase"
-import "../styles/Navbar.css";
->>>>>>> 83701db6c157c47c0c61cea408b977b7e86c2ad8
 
 const Login = () => {
-  const { setUser } = useUser();
   const navigate = useNavigate(); // Initialize the useNavigate hook
-
-  const emailPasswordSignIn = (auth, email, password) =>  {
-      signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            const user = user.userCredential;
-            setUser(user)  
-            navigate("/dashboard"); // Redirect to the Dashboard page
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            navigate("/")
-          })
-  }
-
   const handleLogin = (e) => {
     e.preventDefault();
     // Here, add login validation logic or authentication logic (e.g., Firebase)
