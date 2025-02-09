@@ -141,6 +141,7 @@ const Dashboard = () => {
         <div className="player-character-wrapper">
           <h2 className="player-username">MysticSorcerer42</h2>
           <PlayerCharacter />
+          <span> XP: { userXP } / 500 </span>
         </div>
         <div className="map-container">
           <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
