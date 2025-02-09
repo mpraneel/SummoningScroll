@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import QuestMap from "../components/QuestMap";
+import QuestList from "../components/QuestList";
 import { LoadScript } from "@react-google-maps/api";
 import DashboardNavbar from "../components/DashboardNavbar";
 
@@ -20,16 +21,6 @@ const Dashboard = () => {
       location: { lat: 35.7741, lng: -78.6330 },
     },
   ];
-
-  // Mock fetchQuests function
-  const fetchQuests = () => {
-    console.log("Mock fetchQuests called");
-  };
-
-  // Fetch quests from Firebase on component mount
-  useEffect(() => {
-    fetchQuests();
-  }, []);
 
   // Get user's current location
   useEffect(() => {
@@ -58,6 +49,7 @@ const Dashboard = () => {
           )}
         </LoadScript>
       </div>
+      <QuestList quests={quests} /> {/* ✅ Added Quest List Below Map */}
     </div>
   );
 };
