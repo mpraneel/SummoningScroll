@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import "../styles/QuestList.css"; 
 import markerIcon from "../images/quest-marker.png"; // Import image
 
-
 const mapContainerStyle = {
-  width: "80%", 
-  maxWidth: "800px", 
-  height: "50vh", 
+  width: "80%",
+  maxWidth: "800px",
+  height: "50vh",
   minHeight: "300px",
-  margin: "20px auto", 
-  borderRadius: "10px", 
-  border: "3px solid #8b0000", 
+  margin: "20px auto",
+  borderRadius: "10px",
+  border: "3px solid #8b0000",
 };
 
 const QuestMap = ({ userLocation, quests }) => {
-  const [selectedQuest, setSelectedQuest] = useState(null); // Track which marker is clicked
+  const [selectedQuest, setSelectedQuest] = useState(null);
 
   if (!userLocation) return <div>Loading user location...</div>;
 
@@ -39,25 +39,35 @@ const QuestMap = ({ userLocation, quests }) => {
           key={index}
           position={{ lat: quest.location.lat, lng: quest.location.lng }}
           icon={{
-            url: "/castle.png", // Use custom castle icon from the public directory
-            scaledSize: new window.google.maps.Size(40, 40), // Scale the icon
+            url: "/castle.png",
+            scaledSize: new window.google.maps.Size(40, 40),
           }}
           title={quest.title}
-          onClick={() => setSelectedQuest(quest)} // Set selected quest on click
+          onClick={() => setSelectedQuest(quest)}
         />
       ))}
 
       {/* Info Window for Selected Quest */}
       {selectedQuest && (
         <InfoWindow
-          position={{ lat: selectedQuest.location.lat, lng: selectedQuest.location.lng }}
-          onCloseClick={() => setSelectedQuest(null)} // Close on click
+          position={{
+            lat: selectedQuest.location.lat,
+            lng: selectedQuest.location.lng,
+          }}
+          onCloseClick={() => setSelectedQuest(null)}
         >
           <div>
             <h3>{selectedQuest.title}</h3>
             <p>{selectedQuest.description}</p>
-            <p><strong>Location:</strong> {selectedQuest.location.lat}, {selectedQuest.location.lng}</p>
-            {/* Add more details as needed */}
+            <p><strong>Location:</strong> {selectedQuest.place}</p>
+            <a
+              href={selectedQuest.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="apply-link"
+            >
+              <button>Apply</button>
+            </a>
           </div>
         </InfoWindow>
       )}
