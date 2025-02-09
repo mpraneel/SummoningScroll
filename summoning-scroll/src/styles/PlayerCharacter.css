@@ -20,9 +20,3 @@
     margin-left: 8px;
   }
   
-  .player-avatar {
-    width: 200px; /* Adjust size for the avatar */
-    height: 200px;
-    image-rendering: pixelated; /* Keep the pixel art effect */
-  }
-  

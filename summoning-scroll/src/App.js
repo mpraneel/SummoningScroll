@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Intro from "./pages/Intro";
 import Guilds from "./pages/Guilds";
 import Ledger from "./pages/Ledger";
+import Inventory from "./pages/Inventory";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path = "/Guilds" element = {<Guilds />} />
         <Route path = "/Ledger" element = {<Ledger />} />
+        <Route path = "/Inventory" element = {<Inventory />} />
       </Routes>
     </Router>
   );
