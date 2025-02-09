@@ -1,18 +1,22 @@
-import React from "react";
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import React, { useState } from "react";
+import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import "../styles/QuestList.css"; 
+import markerIcon from "../images/quest-marker.png"; // Import image
 
 const mapContainerStyle = {
-  width: "100%",
-  height: "calc(100vh - 60px)", // Adjust height to account for Navbar
+  width: "80%",
+  maxWidth: "800px",
+  height: "50vh",
+  minHeight: "300px",
+  margin: "20px auto",
+  borderRadius: "10px",
+  border: "3px solid #8b0000",
 };
 
 const QuestMap = ({ userLocation, quests }) => {
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-  });
+  const [selectedQuest, setSelectedQuest] = useState(null);
 
-  if (loadError) return <div>Error loading maps</div>;
-  if (!isLoaded) return <div>Loading Maps...</div>;
+  if (!userLocation) return <div>Loading user location...</div>;
 
   return (
     <GoogleMap
@@ -20,22 +24,53 @@ const QuestMap = ({ userLocation, quests }) => {
       zoom={14}
       center={userLocation}
     >
-      {/* Marker for user's location */}
+      {/* User's Location Marker */}
       <Marker
         position={userLocation}
         icon={{
-          url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+          url: markerIcon, // Use local image
+          scaledSize: new window.google.maps.Size(50, 50), // Resize marker
         }}
       />
 
-      {/* Markers for quests */}
-      {quests.map((quest) => (
+      {/* Quest Markers */}
+      {quests.map((quest, index) => (
         <Marker
-          key={quest.id}
-          position={{ lat: quest.latitude, lng: quest.longitude }}
+          key={index}
+          position={{ lat: quest.location.lat, lng: quest.location.lng }}
+          icon={{
+            url: "/castle.png",
+            scaledSize: new window.google.maps.Size(40, 40),
+          }}
           title={quest.title}
+          onClick={() => setSelectedQuest(quest)}
         />
       ))}
+
+      {/* Info Window for Selected Quest */}
+      {selectedQuest && (
+        <InfoWindow
+          position={{
+            lat: selectedQuest.location.lat,
+            lng: selectedQuest.location.lng,
+          }}
+          onCloseClick={() => setSelectedQuest(null)}
+        >
+          <div>
+            <h3>{selectedQuest.title}</h3>
+            <p>{selectedQuest.description}</p>
+            <p><strong>Location:</strong> {selectedQuest.place}</p>
+            <a
+              href={selectedQuest.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="apply-link"
+            >
+              <button>Apply</button>
+            </a>
+          </div>
+        </InfoWindow>
+      )}
     </GoogleMap>
   );
 };

@@ -1,0 +1,54 @@
+.dashboard-container {
+    display: flex;
+    align-items: flex-start; /* Align components to the top */
+    justify-content: flex-start; /* Align components to the left */
+    gap: -20px; /* Space between the Player Character box and the map */
+    margin: 5px auto; /* Center the entire container */
+    width: 90%;
+    max-width: 1200px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    padding: 20px;
+    
+  }
+  
+  .player-character-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack username and character box vertically */
+    align-items: center; /* Center-align username and box */
+    margin-left: -100px; /* Adjust the Player Character Box closer to the screen edge */
+  }
+  
+  .player-character-box {
+    display: flex;
+    flex-direction: column; /* Stack username and avatar vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    min-height: 300px; /* Ensures consistent height */
+    margin: 20px auto; /* Centers the box */
+    width: 200px; /* Increased width (double the standard 200px) */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #8b0000; /* Red border */
+    background: rgba(245, 225, 164, 0.9); /* Fantasy parchment background */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  
+  .player-username {
+    font-family: "Rye", cursive;
+    color: #6b4226;
+    font-size: 1.5rem;
+    margin-bottom: -5px; /* Space between username and Player Character Box */
+  }
+  
+  .map-container {
+    flex: 1; /* Takes up the remaining space */
+    height: 50vh; /* Consistent height with Player Character */
+    border-radius: 10px; /* Single rounded border */ 
+    margin-left: -130px;
+  }
+  
+
+    .leaderboard-wrapper {
+    grid-column: 3 / 4; /* Right column */
+  }

@@ -3,7 +3,12 @@ import { auth } from  "../firebase/firebase"
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
 import "../styles/Login.css"; // Link to your CSS
+<<<<<<< HEAD
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+=======
+import { auth, provider, googleSignin } from  "../firebase/firebase"
+import "../styles/Navbar.css";
+>>>>>>> 83701db6c157c47c0c61cea408b977b7e86c2ad8
 
 const Login = () => {
   const { setUser } = useUser();

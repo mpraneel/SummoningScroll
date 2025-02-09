@@ -1,0 +1,91 @@
+.quest-list {
+    margin-top: 20px;
+  }
+  
+  .quest-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .quest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between items */
+    max-height: 300px; /* Maximum height before scrolling */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 100px; /* Move the grid to the left */
+  }
+  
+  .quest-item {
+    font-size: 1rem;
+    line-height: 1.4;
+    background: none; /* No borders or outlines */
+  }
+  
+  .quest-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .quest-item p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .redeem-code-modal {
+    position: fixed; /* Make sure it's above everything */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(245, 225, 164, 0.95); /* Parchment style */
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #8b0000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Ensure it's above everything */
+  }
+  
+  .quest-title {
+    cursor: pointer; /* Show clickable pointer */
+    text-decoration: underline; /* Make it clear it's clickable */
+  }
+  
+  .redeem-code-modal input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 2px solid #8b0000;
+    border-radius: 5px;
+  }
+  
+  .redeem-code-modal button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .redeem-code-modal button:first-of-type {
+    background-color: #8b0000;
+    color: white;
+  }
+  
+  .redeem-code-modal button:first-of-type:hover {
+    background-color: #a60000;
+  }
+  
+  .redeem-code-modal button:last-of-type {
+    background-color: gray;
+    color: white;
+  }
+  
+  .redeem-code-modal button:last-of-type:hover {
+    background-color: darkgray;
+  }
+  

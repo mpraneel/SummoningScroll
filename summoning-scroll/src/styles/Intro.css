@@ -1,0 +1,209 @@
+.intro-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url("../images/parchment-texture.jpeg") no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white;
+    text-align: center;
+   }
+   
+
+   .intro-content {
+    max-width: 1000px;
+    padding: 20px;
+   }
+   
+   
+   .intro-title {
+   font-family: "Rye", cursive;
+    font-size: 3rem;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color:black;
+   }
+
+   .intro-titletwo {
+    font-family: "Rye", cursive;
+     font-size: 3rem;
+     margin-top: 200px;
+     color:black;
+    }
+   
+    .intro-Subheading1 {
+      font-family: "Rye", cursive;
+     font-size: 2.5rem;
+     margin-top: 75px;
+     width: 50%;
+     color:black;
+    }
+
+    .intro-SubPara1 {
+      color:black;
+      font-family: "Antic Slab", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    width: 50%
+   }
+
+   .subpara-container1 {
+    display: flex; /* Aligns the image and paragraph horizontally */
+    align-items: center; /* Vertically centers the image and paragraph */
+    gap: 200px; /* Adds space between the image and paragraph */
+  }
+  
+  .castle-image {
+    width: 250px; /* Adjust the width of the castle image */
+    height: auto; /* Maintains the aspect ratio */
+  }
+
+    .intro-Subheading2 {
+      font-family: "Rye", cursive;
+     font-size: 2.5rem;
+     margin-top: 75px;
+     width: 142%;
+     color:black;
+    }
+
+    .intro-SubPara2 {
+      color:black;
+      font-family: "Antic Slab", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    width: 50%;
+   }
+
+   .subpara-container2 {
+    display: flex; /* Aligns the image and paragraph horizontally */
+    align-items: center; /* Vertically centers the image and paragraph */
+    gap: 150px; /* Adds space between the image and paragraph */
+  }
+  
+  .quest-image {
+    width: 300px; /* Adjust the width of the castle image */
+    height: auto; /* Maintains the aspect ratio */
+  } /* Maintains the aspect ratio */
+
+  .intro-Subheading3 {
+    font-family: "Rye", cursive;
+   font-size: 2.5rem;
+   margin-top: 75px;
+   width: 50%;
+   color:black;
+  }
+
+  .intro-SubPara3 {
+    color:black;
+    font-family: "Antic Slab", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  width: 50%
+ }
+
+ .subpara-container3 {
+  display: flex; /* Aligns the image and paragraph horizontally */
+  align-items: center; /* Vertically centers the image and paragraph */
+  gap: 200px; /* Adds space between the image and paragraph */
+}
+
+.wizard-image {
+  width: 300px; /* Adjust the width of the castle image */
+  height: auto; /* Maintains the aspect ratio */
+} /* Maintains the aspect ratio */
+
+.intro-Subheading4 {
+  font-family: "Rye", cursive;
+ font-size: 2.5rem;
+ margin-top: 75px;
+ width: 142%;
+ color:black;
+}
+
+.intro-SubPara4 {
+  color:black;
+  font-family: "Antic Slab", cursive;
+font-size: 1.5rem;
+margin-bottom: 30px;
+width: 50%;
+}
+
+.subpara-container4 {
+display: flex; /* Aligns the image and paragraph horizontally */
+align-items: center; /* Vertically centers the image and paragraph */
+gap: 200px; /* Adds space between the image and paragraph */
+}
+
+.sword-image {
+width: 250px; /* Adjust the width of the castle image */
+height: auto; /* Maintains the aspect ratio */
+} /* Maintains the aspect ratio */
+
+
+   .intro-paragraph {
+      color:black;
+      font-family: "Antic Slab", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+   }
+   
+   
+   
+   .intro-login-button {
+      font-family: "Antic Slab";
+   position: absolute;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: #D49665;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 125px;
+    top: 20px; /* Distance from the top */
+    right: 200px;
+   }
+   
+   
+   .signup-button {
+      font-family: "Antic Slab";
+      position: absolute;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: white;
+      background-color: #5C2C06;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      width: 125px;
+      top: 20px; /* Distance from the top */
+      right: 50px;
+    }
+   
+   
+   .intro-login-button:hover {
+    background-color: #f0f0f0;
+   }
+   
+   
+   .intro-wax-seal {
+   position: absolute; /* Position the image absolutely */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    height: 160px; /* Adjust the height as needed */
+    width: auto;
+    }
+   
+   
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

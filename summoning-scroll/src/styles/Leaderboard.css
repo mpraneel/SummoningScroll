@@ -1,0 +1,57 @@
+.leaderboard-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 300px; /* Slightly longer height */
+    width: 250px; /* Adjust width */
+    position: absolute; /* Use absolute positioning */
+    top: 155px; /* Position inline with player character box */
+    right: 40px; /* Closer to the right margin */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #8b0000; /* Red border */
+    background: rgba(245, 225, 164, 0.9); /* Fantasy parchment background */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    grid-column: 3 / 4;
+  }
+  
+  .leaderboard-title {
+    font-size: 1.5rem; /* Larger font for title */
+    font-weight: bold; /* Emphasize the title */
+    margin-bottom: 10px; /* Add spacing below the title */
+    text-align: center;
+    font-family: "Rye"
+  }
+  
+  .leaderboard-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width for better alignment */
+  }
+  
+  .leaderboard-item {
+    display: flex;
+    justify-content: space-between; /* Spread rank, name, and XP */
+    align-items: center;
+    font-size: 1rem;
+    margin: 10px 0; /* Spacing between items */
+    padding: 10px 15px; /* Inner padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 5px; /* Rounded corners for items */
+  }
+  
+  .player-rank {
+    font-weight: bold; /* Highlight the rank */
+    color: #8b0000; /* Match the red border */
+  }
+  
+  .player-name {
+    flex: 1; /* Take up available space */
+    text-align: center; /* Center align the name */
+  }
+  
+  .player-xp {
+    font-weight: bold; /* Highlight XP */
+  }
+  
