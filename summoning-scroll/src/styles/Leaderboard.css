@@ -6,19 +6,21 @@
     min-height: 300px; /* Slightly longer height */
     width: 250px; /* Adjust width */
     position: absolute; /* Use absolute positioning */
-    top: 145px; /* Position inline with player character box */
+    top: 155px; /* Position inline with player character box */
     right: 40px; /* Closer to the right margin */
     border-radius: 10px; /* Rounded corners */
     border: 3px solid #8b0000; /* Red border */
     background: rgba(245, 225, 164, 0.9); /* Fantasy parchment background */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    grid-column: 3 / 4;
   }
   
   .leaderboard-title {
     font-size: 1.5rem; /* Larger font for title */
     font-weight: bold; /* Emphasize the title */
-    margin-bottom: 20px; /* Add spacing below the title */
+    margin-bottom: 10px; /* Add spacing below the title */
     text-align: center;
+    font-family: "Rye"
   }
   
   .leaderboard-list {

@@ -13,17 +13,17 @@ const Leaderboard = () => {
 
   return (
     <div className="leaderboard-box">
-      <h2 className="leaderboard-title">Leaderboard</h2>
-      <ul className="leaderboard-list">
-        {players.map((player) => (
-          <li key={player.rank} className="leaderboard-item">
+   <h2 className="leaderboard-title">Leaderboard</h2>
+   <ul className="leaderboard-list">
+      {players.map((player) => (
+         <li key={player.rank} className="leaderboard-item">
             <span className="player-rank">#{player.rank}</span>
             <span className="player-name">{player.username}</span>
             <span className="player-xp">{player.xp} XP</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+         </li>
+      ))}
+   </ul>
+</div>
   );
 };
 

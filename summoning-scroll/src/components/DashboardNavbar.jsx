@@ -10,6 +10,11 @@ const DashboardNavbar = () => {
           <span>Summoning Scroll</span>
         </Link>
         <ul className="navbar-links">
+        <li className="navbar-item">
+            <Link to ="/dashboard" className="navbar-link">
+              Dashboard
+            </Link>
+          </li>
           <li className="navbar-item">
             <Link to="/inventory" className="navbar-link">
               Inventory
