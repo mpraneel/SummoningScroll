@@ -13,11 +13,11 @@ const Inventory = () => {
     setSelectedItem(null); // Close the modal
   };
 
-// Placeholder inventory items
+  // Placeholder inventory items
 const inventoryItems = [
-    { id: 1, icon: "/item-sword.png", name: "Sword of Justice" },
-    { id: 2, icon: "/item-potion.png", name: "Potion of Healing" },
-    { id: 3, icon: "/item-shield.png", name: "Shield of Valor" },
+    { id: 1, icon: "/RizzsawsEnergyKatana.png", name: "Sword of Justice" },
+    { id: 2, icon: "/potion.png", name: "Potion of Healing" },
+    { id: 3, icon: "/shield.png", name: "Shield of Valor" },
     { id: 4, icon: "/item-boots.png", name: "Boots of Speed" },
     { id: 5, icon: "/item-helmet.png", name: "Helmet of Wisdom" },
     { id: 6, icon: "/item-gauntlets.png", name: "Gauntlets of Strength" },
@@ -33,7 +33,7 @@ const inventoryItems = [
           <img src="/wizard-avatar.png" alt="Player Avatar" className="player-inv-avatar" />
           <div className="player-info">
             <h3>Sir Lancelot</h3>
-            <p>Rank: Supreme Wizard</p>
+            <p>Level: 5</p>
             <p>XP: 450</p>
             <p>Gold: 300</p>
           </div>
@@ -58,7 +58,11 @@ const inventoryItems = [
           <div className="modal-overlay">
             <div className="modal">
               <h3>{selectedItem.name}</h3>
-              <img src={selectedItem.icon} alt={selectedItem.name} className="modal-icon" />
+              <img
+                src={selectedItem.icon}
+                alt={selectedItem.name}
+                className="modal-icon"
+              />
               <p>What would you like to do with this item?</p>
               <button onClick={closeModal}>Close</button>
               <button onClick={() => alert(`Equipped ${selectedItem.name}`)}>
