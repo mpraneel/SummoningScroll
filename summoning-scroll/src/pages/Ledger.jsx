@@ -51,7 +51,7 @@ const Ledger = () => {
                   <strong>Guild:</strong> {event.guild}
                 </p>
                 <p>
-                  <strong>Date:</strong> {event.date}
+                  <strong>Date Completed:</strong> {event.date}
                 </p>
               </div>
             </li>
