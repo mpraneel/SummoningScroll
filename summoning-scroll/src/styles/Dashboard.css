@@ -6,6 +6,9 @@
     margin: 5px auto; /* Center the entire container */
     width: 90%;
     max-width: 1200px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    padding: 20px;
   }
   
   .player-character-wrapper {
@@ -40,7 +43,11 @@
   .map-container {
     flex: 1; /* Takes up the remaining space */
     height: 50vh; /* Consistent height with Player Character */
-    border-radius: 10px; /* Single rounded border */
-    border: 3px solid #ffffff; /* Single border for the map */
+    border-radius: 10px; /* Single rounded border */ 
+    margin-left: -130px;
   }
   
+
+    .leaderboard-wrapper {
+    grid-column: 3 / 4; /* Right column */
+  }

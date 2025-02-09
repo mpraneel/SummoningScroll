@@ -1,0 +1,38 @@
+.quest-list {
+    margin-top: 20px;
+  }
+  
+  .quest-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .quest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between items */
+    max-height: 300px; /* Maximum height before scrolling */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 100px; /* Move the grid to the left */
+  }
+  
+  .quest-item {
+    font-size: 1rem;
+    line-height: 1.4;
+    background: none; /* No borders or outlines */
+  }
+  
+  .quest-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .quest-item p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  

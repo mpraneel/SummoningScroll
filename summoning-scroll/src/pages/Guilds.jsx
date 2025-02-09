@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardNavbar from "../components/DashboardNavbar";
 import "../styles/Guilds.css";
-import castleImage from "../images/castle-icon-map-pin-on-260nw-266533505-ezgif.com-webp-to-jpg-converter-removebg-preview.png";
+import castleImage from "../images/castle-icon.png";
 
 
 // Placeholder guild data

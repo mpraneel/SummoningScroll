@@ -34,10 +34,14 @@ const QuestMap = ({ userLocation, quests }) => {
       />
 
       {/* Quest Markers */}
-      {quests.map((quest) => (
+      {quests.map((quest, index) => (
         <Marker
-          key={quest.id}
+          key={index}
           position={{ lat: quest.location.lat, lng: quest.location.lng }}
+          icon={{
+            url: "/castle.png", // Use custom castle icon from the public directory
+            scaledSize: new window.google.maps.Size(40, 40), // Scale the icon
+          }}
           title={quest.title}
           onClick={() => setSelectedQuest(quest)} // Set selected quest on click
         />
