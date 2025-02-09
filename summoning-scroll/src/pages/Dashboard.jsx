@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import QuestMap from "../components/QuestMap";
 import { LoadScript } from "@react-google-maps/api";
+import DashboardNavbar from "../components/DashboardNavbar";
 
 const Dashboard = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -49,7 +50,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <Navbar />
+      <DashboardNavbar />
       <div className="map-container">
         <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
           {userLocation && (
