@@ -1,33 +1,34 @@
 import React from "react";
 import DashboardNavbar from "../components/DashboardNavbar";
 import "../styles/Ledger.css"; // CSS for styling the ledger page
+import imageLedger from "../images/Seal.png"; 
 
 // Placeholder event data
 const placeholderEvents = [
   {
     id: 1,
-    logo: "/event-logo-1.png", // Path to the event logo
+    logo: imageLedger, // Path to the event logo
     title: "Community Cleanup",
     guild: "Green Earth Initiative",
     date: "2023-10-15",
   },
   {
     id: 2,
-    logo: "/event-logo-2.png", // Path to the event logo
+    logo: imageLedger, // Path to the event logo
     title: "Food Drive",
     guild: "Food for All",
     date: "2023-10-10",
   },
   {
     id: 3,
-    logo: "/event-logo-3.png", // Path to the event logo
+    logo: imageLedger, // Path to the event logo
     title: "Tech Workshop",
     guild: "Tech for Good",
     date: "2023-10-05",
   },
   {
     id: 4,
-    logo: "/event-logo-4.png", // Path to the event logo
+    logo: imageLedger, // Path to the event logo
     title: "Charity Run",
     guild: "Healthy Lives Foundation",
     date: "2023-09-30",
