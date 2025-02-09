@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
 import "../styles/Login.css"; // Link to your CSS
 import { auth, provider, googleSignin } from  "../firebase/firebase"
+import "../styles/Navbar.css";
 
 const Login = () => {
   const navigate = useNavigate(); // Initialize the useNavigate hook
