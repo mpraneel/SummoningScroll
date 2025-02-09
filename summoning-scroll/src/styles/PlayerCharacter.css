@@ -1,0 +1,28 @@
+.player-character-box {
+    display: flex;
+    flex-direction: column; /* Stack username and avatar vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 250px; /* Ensures consistent height */
+    margin: 20px auto; /* Centers the box */
+    width: 400px; /* Doubled width */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #8b0000; /* Red border */
+    background: rgba(245, 225, 164, 0.9); /* Fantasy parchment background */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .player-avatar {
+    width: 200px; /* Adjust size for the avatar */
+    height: 200px;
+    image-rendering: pixelated; /* Keep the pixel art sharp */
+    margin-bottom: 50px; 
+    margin-left: 8px;
+  }
+  
+  .player-avatar {
+    width: 200px; /* Adjust size for the avatar */
+    height: 200px;
+    image-rendering: pixelated; /* Keep the pixel art effect */
+  }
+  

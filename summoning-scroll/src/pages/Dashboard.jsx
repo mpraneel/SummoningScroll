@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import QuestMap from "../components/QuestMap";
 import QuestList from "../components/QuestList";
+import PlayerCharacter from "../components/PlayerCharacter";
 import { LoadScript } from "@react-google-maps/api";
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -41,14 +43,20 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <Navbar />
-      <div className="map-container">
-        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-          {userLocation && (
-            <QuestMap userLocation={userLocation} quests={quests} />
-          )}
-        </LoadScript>
+      <div className="dashboard-container">
+        <div className="player-character-wrapper">
+          <h2 className="player-username">MysticSorcerer42</h2>
+          <PlayerCharacter />
+        </div>
+        <div className="map-container">
+          <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
+            {userLocation && (
+              <QuestMap userLocation={userLocation} quests={quests} />
+            )}
+          </LoadScript>
+        </div>
       </div>
-      <QuestList quests={quests} /> {/* ✅ Added Quest List Below Map */}
+      <QuestList quests={quests} />
     </div>
   );
 };
