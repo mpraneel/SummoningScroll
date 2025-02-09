@@ -10,61 +10,112 @@ import DashboardNavbar from "../components/DashboardNavbar";
 
 const Dashboard = () => {
   const [userLocation, setUserLocation] = useState(null);
+  const [userXP, setUserXP] = useState(0);
 
   // Mock quests data
   const quests = [
     {
       title: "Save the Forest",
-      description: "Plant trees in the park",
-      location: { lat: 35.7847, lng: -78.6821 },
+      description: "Plant trees in Pullen Park.",
+      place: "Pullen Park",
+      location: { lat: 35.7852, lng: -78.6625 },
+      website: "https://example.com/save-the-forest",
+      code: "FOREST123",
     },
     {
       title: "Feed the Hungry",
-      description: "Serve meals at the shelter",
-      location: { lat: 35.7741, lng: -78.6330 },
+      description: "Serve meals at Shepherd's Table Soup Kitchen.",
+      place: "Shepherd's Table Soup Kitchen",
+      location: { lat: 35.7764, lng: -78.6394 },
+      website: "https://example.com/feed-the-hungry",
+      code: "HUNGRY456",
     },
     {
       title: "Cleanup Crew",
-      description: "Help clean up a local trail.",
-      location: { lat: 35.7800, lng: -78.6900 },
+      description: "Help clean up the Walnut Creek Wetland Park.",
+      place: "Walnut Creek Wetland Park",
+      location: { lat: 35.7642, lng: -78.6231 },
+      website: "https://example.com/cleanup-crew",
+      code: "CLEAN789",
     },
     {
-      title: "Library Organizer",
-      description: "Organize books at the local library.",
-      location: { lat: 35.7700, lng: -78.6600 },
-    },
-    {
-      title: "Food Drive",
-      description: "Distribute food at the community center.",
-      location: { lat: 35.7680, lng: -78.6800 },
-    },
-    {
-      title: "Neighborhood Watch",
-      description: "Assist with safety patrols in the area.",
-      location: { lat: 35.7750, lng: -78.6700 },
-    },
-    {
-      title: "Tech Tutor",
-      description: "Help seniors with technology basics.",
-      location: { lat: 35.7600, lng: -78.6850 },
-    },
-    {
-      title: "Community Garden",
-      description: "Plant and maintain flowers and vegetables.",
-      location: { lat: 35.7650, lng: -78.6500 },
+      title: "Community Garden Helper",
+      description: "Assist in growing vegetables and flowers at the NC State Farmers Market Garden.",
+      place: "NC State Farmers Market Garden",
+      location: { lat: 35.7651, lng: -78.6623 },
+      website: "https://example.com/community-garden",
+      code: "GARDEN101",
     },
     {
       title: "Animal Shelter Volunteer",
-      description: "Assist with taking care of rescued animals.",
-      location: { lat: 35.7820, lng: -78.6400 },
+      description: "Assist with caring for rescued animals at SPCA of Wake County.",
+      place: "SPCA of Wake County",
+      location: { lat: 35.7283, lng: -78.6466 },
+      website: "https://example.com/animal-shelter",
+      code: "ANIMAL321",
     },
     {
-      title: "School Supply Drive",
-      description: "Distribute supplies to underprivileged kids.",
-      location: { lat: 35.7700, lng: -78.7100 },
+      title: "Park Cleanup",
+      description: "Help remove litter and maintain walking trails in Nash Square Park.",
+      place: "Nash Square Park",
+      location: { lat: 35.7791, lng: -78.6439 },
+      website: "https://example.com/park-cleanup",
+      code: "PARK555",
     },
-  ];  
+    {
+      title: "Library Book Sorter",
+      description: "Assist with organizing books and helping visitors at the Cameron Village Library.",
+      place: "Cameron Village Library",
+      location: { lat: 35.7870, lng: -78.6633 },
+      website: "https://example.com/library-helper",
+      code: "BOOK789",
+    },
+    {
+      title: "Food Pantry Helper",
+      description: "Sort and distribute food at the Raleigh Food Bank.",
+      place: "Raleigh Food Bank",
+      location: { lat: 35.7793, lng: -78.6525 },
+      website: "https://example.com/food-pantry",
+      code: "FOOD999",
+    },
+    {
+      title: "Tech Tutor for Seniors",
+      description: "Teach basic computer and smartphone skills to seniors at Five Points Center for Active Adults.",
+      place: "Five Points Center for Active Adults",
+      location: { lat: 35.8012, lng: -78.6442 },
+      website: "https://example.com/tech-tutor",
+      code: "TECH777",
+    },
+    {
+      title: "After-School Tutor",
+      description: "Help elementary school kids with reading and homework at Raleigh Community Center.",
+      place: "Raleigh Community Center",
+      location: { lat: 35.7705, lng: -78.6802 },
+      website: "https://example.com/tutor-kids",
+      code: "TUTOR222",
+    },
+    {
+      title: "Community Recycling Initiative",
+      description: "Assist with sorting and recycling waste at the Raleigh Recycling Center.",
+      place: "Raleigh Recycling Center",
+      location: { lat: 35.7688, lng: -78.6583 },
+      website: "https://example.com/recycling-helper",
+      code: "RECYCLE888",
+    },
+    {
+      title: "Homeless Shelter Assistance",
+      description: "Prepare meals and distribute essentials at the Raleigh Rescue Mission.",
+      place: "Raleigh Rescue Mission",
+      location: { lat: 35.7741, lng: -78.6382 },
+      website: "https://example.com/homeless-help",
+      code: "HELP444",
+    },
+  ];
   
+
+  const addXP = (xp) => {
+    setUserXP(userXP + xp);
+  };
 
   // Get user's current location
   useEffect(() => {
@@ -98,11 +149,12 @@ const Dashboard = () => {
             )}
           </LoadScript>
         </div>
-        <div className="leaderboard-wrapper"> {/* Wrapper for the leaderboard */}
+        <div className="leaderboard-wrapper">
           <Leaderboard />
         </div>
       </div>
-      <QuestList quests={quests} />
+      <QuestList quests={quests} addXP={addXP} />
+      <div className="xp-display">XP: {userXP}</div>
     </div>
   );
 };

@@ -1,0 +1,30 @@
+.apply-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .apply-button.applied {
+    background-color: #228b22; /* Green background for applied */
+    transform: scale(1.1); /* Slightly grow the button */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+  }
+  
+  .apply-button:hover:not(.applied) {
+    background-color: #a60000;
+  }
+  
+  .apply-button span {
+    font-size: 1.5rem;
+    margin-right: 5px; /* Add spacing between '+' and 'Apply' */
+  }
+  
