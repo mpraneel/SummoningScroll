@@ -1,8 +1,10 @@
 .intro-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
     background-image: url("../images/parchment-texture.jpeg") no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center; /* Centers the image */
@@ -21,17 +23,134 @@
    .intro-title {
    font-family: "Rye", cursive;
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     color:black;
    }
+
+   .intro-titletwo {
+    font-family: "Rye", cursive;
+     font-size: 3rem;
+     margin-top: 200px;
+     color:black;
+    }
    
-   
+    .intro-Subheading1 {
+      font-family: "Rye", cursive;
+     font-size: 2.5rem;
+     margin-top: 75px;
+     width: 50%;
+     color:black;
+    }
+
+    .intro-SubPara1 {
+      color:black;
+      font-family: "Antic Slab", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    width: 50%
+   }
+
+   .subpara-container1 {
+    display: flex; /* Aligns the image and paragraph horizontally */
+    align-items: center; /* Vertically centers the image and paragraph */
+    gap: 200px; /* Adds space between the image and paragraph */
+  }
+  
+  .castle-image {
+    width: 250px; /* Adjust the width of the castle image */
+    height: auto; /* Maintains the aspect ratio */
+  }
+
+    .intro-Subheading2 {
+      font-family: "Rye", cursive;
+     font-size: 2.5rem;
+     margin-top: 75px;
+     width: 142%;
+     color:black;
+    }
+
+    .intro-SubPara2 {
+      color:black;
+      font-family: "Antic Slab", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    width: 50%;
+   }
+
+   .subpara-container2 {
+    display: flex; /* Aligns the image and paragraph horizontally */
+    align-items: center; /* Vertically centers the image and paragraph */
+    gap: 150px; /* Adds space between the image and paragraph */
+  }
+  
+  .quest-image {
+    width: 300px; /* Adjust the width of the castle image */
+    height: auto; /* Maintains the aspect ratio */
+  } /* Maintains the aspect ratio */
+
+  .intro-Subheading3 {
+    font-family: "Rye", cursive;
+   font-size: 2.5rem;
+   margin-top: 75px;
+   width: 50%;
+   color:black;
+  }
+
+  .intro-SubPara3 {
+    color:black;
+    font-family: "Antic Slab", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  width: 50%
+ }
+
+ .subpara-container3 {
+  display: flex; /* Aligns the image and paragraph horizontally */
+  align-items: center; /* Vertically centers the image and paragraph */
+  gap: 200px; /* Adds space between the image and paragraph */
+}
+
+.wizard-image {
+  width: 300px; /* Adjust the width of the castle image */
+  height: auto; /* Maintains the aspect ratio */
+} /* Maintains the aspect ratio */
+
+.intro-Subheading4 {
+  font-family: "Rye", cursive;
+ font-size: 2.5rem;
+ margin-top: 75px;
+ width: 142%;
+ color:black;
+}
+
+.intro-SubPara4 {
+  color:black;
+  font-family: "Antic Slab", cursive;
+font-size: 1.5rem;
+margin-bottom: 30px;
+width: 50%;
+}
+
+.subpara-container4 {
+display: flex; /* Aligns the image and paragraph horizontally */
+align-items: center; /* Vertically centers the image and paragraph */
+gap: 200px; /* Adds space between the image and paragraph */
+}
+
+.sword-image {
+width: 250px; /* Adjust the width of the castle image */
+height: auto; /* Maintains the aspect ratio */
+} /* Maintains the aspect ratio */
+
+
    .intro-paragraph {
       color:black;
       font-family: "Antic Slab", cursive;
     font-size: 1.5rem;
     margin-bottom: 30px;
    }
+   
    
    
    .intro-login-button {
