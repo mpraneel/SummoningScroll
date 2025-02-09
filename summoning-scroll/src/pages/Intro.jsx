@@ -11,9 +11,9 @@
     return (
         <div className="intro-container">
             <div className="intro-logo">
-            <img src="/Seal.png" alt="Wax Seal" className="wax-seal" />
+            <img src="/Seal.png" alt="Wax Seal" className="intro-wax-seal" />
             </div>
-            <button className="login-button" onClick={handleLoginPress}>Login</button>
+            <button className="intro-login-button" onClick={handleLoginPress}>Login</button>
             <button className="signup-button">Sign Up</button>
         <div className="intro-content">
             <h1 className="intro-title">Welcome To Summoning Scroll</h1>
@@ -31,6 +31,7 @@
             <p className="intro-paragraph">
             Your journey starts here—discover your calling, connect with a community of changemakers, and be the hero your city needs. Join us today and turn your passion into purpose!
             </p>
+            
         </div>
         </div>
     );

@@ -11,7 +11,7 @@
     text-align: center;
    }
    
-   
+
    .intro-content {
     max-width: 1000px;
     padding: 20px;
@@ -34,7 +34,7 @@
    }
    
    
-   .login-button {
+   .intro-login-button {
       font-family: "Antic Slab";
    position: absolute;
     padding: 15px 30px;
@@ -66,12 +66,12 @@
     }
    
    
-   .intro-button:hover {
+   .intro-login-button:hover {
     background-color: #f0f0f0;
    }
    
    
-   .wax-seal {
+   .intro-wax-seal {
    position: absolute; /* Position the image absolutely */
     top: 20px; /* Distance from the top */
     left: 20px; /* Distance from the left */
